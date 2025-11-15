@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রপার্টি যোগ করুন - বাংলা হোমস</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html" class="active">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons" id="authSection">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="form-container">
+        <h2>নতুন প্রপার্টি যোগ করুন</h2>
+        <form id="propertyForm" class="property-form">
+            <div class="form-group">
+                <label for="title">প্রপার্টির নাম *</label>
+                <input type="text" id="title" name="title" required placeholder="উদা: লাক্সারি অ্যাপার্টমেন্ট, গুলশান">
+            </div>
+
+            <div class="form-group">
+                <label for="description">বর্ণনা</label>
+                <textarea id="description" name="description" placeholder="প্রপার্টির বিস্তারিত বর্ণনা লিখুন..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="location">লোকেশন *</label>
+                <input type="text" id="location" name="location" required placeholder="উদা: রোড ১২৫, গুলশান">
+            </div>
+
+            <div class="form-group">
+                <label for="city">সিটি *</label>
+                <select id="city" name="city" required>
+                    <option value="">সিটি নির্বাচন করুন</option>
+                    <option value="ঢাকা">ঢাকা</option>
+                    <option value="চট্টগ্রাম">চট্টগ্রাম</option>
+                    <option value="সিলেট">সিলেট</option>
+                    <option value="খুলনা">খুলনা</option>
+                    <option value="রাজশাহী">রাজশাহী</option>
+                    <option value="বরিশাল">বরিশাল</option>
+                    <option value="রংপুর">রংপুর</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="price">মাসিক ভাড়া (টাকায়) *</label>
+                <input type="number" id="price" name="price" required placeholder="উদা: 45000" min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="type">প্রপার্টি টাইপ *</label>
+                <select id="type" name="type" required>
+                    <option value="">টাইপ নির্বাচন করুন</option>
+                    <option value="apartment">অ্যাপার্টমেন্ট</option>
+                    <option value="house">বাড়ি</option>
+                    <option value="duplex">ডুপ্লেক্স</option>
+                    <option value="villa">ভিলা</option>
+                    <option value="commercial">কমার্শিয়াল</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bedrooms">বেডরুম সংখ্যা</label>
+                    <input type="number" id="bedrooms" name="bedrooms" min="0" max="10" placeholder="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="bathrooms">বাথরুম সংখ্যা</label>
+                    <input type="number" id="bathrooms" name="bathrooms" min="0" max="10" placeholder="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="size">আয়তন (sqft)</label>
+                    <input type="number" id="size" name="size" min="0" placeholder="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="propertyImages">প্রপার্টির ছবি *</label>
+                <input type="file" id="propertyImages" name="propertyImages" multiple accept="image/*" required>
+                <small style="color: var(--text-light); font-size: 12px;">আপনার প্রপার্টির ১ বা একাধিক ছবি নির্বাচন করুন (JPG, PNG)</small>
+            </div>
+
+            <div class="form-group" id="imagePreview" style="display: none;">
+                <label>নির্বাচিত ছবির প্রিভিউ</label>
+                <div id="previewContainer" style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="featured" id="featured">
+                    ফিচার্ড প্রপার্টি হিসেবে দেখান
+                </label>
+            </div>
+
+            <button type="submit" class="btn-signup" style="width: 100%;">প্রপার্টি যোগ করুন</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <style>
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

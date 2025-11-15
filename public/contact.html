@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ - বাংলা হোমস</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html" class="active">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons" id="authSection">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>আমাদের সাথে যোগাযোগ করুন</h1>
+            <p>আপনার যে কোনো প্রশ্ন বা সহায়তার জন্য আমরা এখানে আছি</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-section">
+                    <h2>মেসেজ পাঠান</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">আপনার নাম *</label>
+                                <input type="text" id="contactName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">ইমেইল *</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">ফোন নম্বর</label>
+                            <input type="tel" id="contactPhone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">বিষয় *</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">বিষয় নির্বাচন করুন</option>
+                                <option value="general">সাধারণ প্রশ্ন</option>
+                                <option value="property">প্রপার্টি সম্পর্কিত</option>
+                                <option value="technical">টেকনিক্যাল ইস্যু</option>
+                                <option value="partnership">পার্টনারশিপ</option>
+                                <option value="other">অন্যান্য</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">মেসেজ *</label>
+                            <textarea id="contactMessage" name="message" rows="6" required placeholder="আপনার মেসেজ এখানে লিখুন..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-signup">মেসেজ পাঠান</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-section">
+                    <h2>যোগাযোগ তথ্য</h2>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div class="info-content">
+                                <h3>ইমেইল</h3>
+                                <p>info@banglahomes.com</p>
+                                <p>support@banglahomes.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-content">
+                                <h3>ফোন</h3>
+                                <p>+৮৮০ ১৬XX-XXXXXX</p>
+                                <p>+৮৮০ ১৯XX-XXXXXX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h3>ঠিকানা</h3>
+                                <p>বাড়ি # ১২৩, রোড # ০৮</p>
+                                <p>বনানী, ঢাকা - ১২১৩</p>
+                                <p>বাংলাদেশ</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">🕒</div>
+                            <div class="info-content">
+                                <h3>কাজের সময়</h3>
+                                <p>শনি - বৃহস্পতি: সকাল ৯টা - রাত ১০টা</p>
+                                <p>শুক্রবার: বন্ধ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>সামাজিক যোগাযোগ</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">📘</a>
+                            <a href="#" class="social-icon">🐦</a>
+                            <a href="#" class="social-icon">📷</a>
+                            <a href="#" class="social-icon">💼</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>সচরাচর জিজ্ঞাসিত প্রশ্ন</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>প্রপার্টি লিস্ট করতে কি ফি দিতে হয়?</h3>
+                    <p>না, বাংলা হোমসে প্রপার্টি লিস্ট করা সম্পূর্ণ বিনামূল্যে। আপনি কোনো চার্জ ছাড়াই আপনার প্রপার্টি লিস্ট করতে পারেন।</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>প্রপার্টি ভেরিফিকেশন কিভাবে হয়?</h3>
+                    <p>আমাদের টিম প্রতিটি প্রপার্টি ম্যানুয়ালি ভেরিফাই করে। আমরা প্রপার্টির অবস্থান, ফটো এবং মালিকের তথ্য যাচাই করি।</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>কিভাবে প্রপার্টি মালিকের সাথে যোগাযোগ করব?</h3>
+                    <p>প্রপার্টি ডিটেইলস পেজে মালিকের ফোন নম্বর এবং ইমেইল দেওয়া থাকে। সরাসরি যোগাযোগ করতে পারেন অথবা মেসেজ পাঠাতে পারেন।</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>প্রপার্টি ভাড়া দেওয়ার প্রক্রিয়া কি?</h3>
+                    <p>প্রপার্টি মালিকের সাথে সরাসরি যোগাযোগ করুন, প্রপার্টি ভিজিট করুন, এবং সম্মত হলে এগ্রিমেন্ট সাইন করুন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-content {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-form-section h2 {
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .contact-info-section h2 {
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .info-content h3 {
+            margin: 0 0 8px 0;
+            color: var(--text-dark);
+        }
+
+        .info-content p {
+            margin: 4px 0;
+            color: var(--text-light);
+        }
+
+        .social-links h3 {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .faq-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--text-dark);
+            font-size: 2.5rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

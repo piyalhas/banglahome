@@ -1,0 +1,638 @@
+﻿<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রপার্টি বিস্তারিত - বাংলা হোমস</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons" id="authSection">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="property-details">
+        <div class="container">
+            <div class="property-details-content">
+                <div class="property-gallery">
+                    <div class="main-image">
+                        <img id="mainPropertyImage" src="" alt="প্রপার্টি ইমেজ">
+                    </div>
+                    <div class="image-thumbnails" id="imageThumbnails">
+                    </div>
+                </div>
+
+                <div class="property-info-details">
+                    <div class="property-header">
+                        <h1 id="propertyTitle">প্রপার্টির নাম</h1>
+                        <div class="property-price" id="propertyPrice">৳ ০/মাস</div>
+                    </div>
+
+                    <div class="property-location" id="propertyLocation">
+                        <span>📍 লোকেশন লোড হচ্ছে...</span>
+                    </div>
+
+                    <div class="property-features-overview">
+                        <div class="feature-item">
+                            <span class="feature-icon">🛏️</span>
+                            <span id="propertyBedrooms">০ বেডরুম</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🚿</span>
+                            <span id="propertyBathrooms">০ বাথরুম</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📐</span>
+                            <span id="propertySize">০ sqft</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🏠</span>
+                            <span id="propertyType">টাইপ</span>
+                        </div>
+                    </div>
+
+                    <div class="property-description">
+                        <h3>বর্ণনা</h3>
+                        <p id="propertyDescription">বর্ণনা লোড হচ্ছে...</p>
+                    </div>
+
+                    <div class="owner-contact">
+                        <h3>মালিকের তথ্য</h3>
+                        <div class="owner-details">
+                            <div class="owner-info">
+                                <strong id="ownerName">নাম লোড হচ্ছে...</strong>
+                                <p id="ownerEmail">ইমেইল: লোড হচ্ছে...</p>
+                                <p id="ownerPhone">ফোন: লোড হচ্ছে...</p>
+                            </div>
+                            <div class="contact-actions">
+                                <button class="btn-call" onclick="contactOwner('call')">📞 কল করুন</button>
+                                <button class="btn-message" onclick="contactOwner('message')">💌 মেসেজ করুন</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-section">
+                        <h3>মেসেজ পাঠান</h3>
+                        <form id="propertyContactForm">
+                            <div class="form-group">
+                                <label for="contactName">আপনার নাম</label>
+                                <input type="text" id="contactName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">ইমেইল</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">ফোন নম্বর</label>
+                                <input type="tel" id="contactPhone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">মেসেজ</label>
+                                <textarea id="contactMessage" name="message" rows="4" required placeholder="আমি এই প্রপার্টিটি সম্পর্কে আরও জানতে আগ্রহী..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-signup">মেসেজ পাঠান</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="similar-properties">
+                <h2>অনুরূপ প্রপার্টিস</h2>
+                <div class="properties-grid" id="similarProperties">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const propertyId = urlParams.get('id');
+
+        async function loadPropertyDetails() {
+            if (!propertyId) {
+                document.querySelector('.property-details-content').innerHTML = `
+                    <div class="error-message">
+                        <h2>প্রপার্টি খুঁজে পাওয়া যায়নি</h2>
+                        <p>দুঃখিত, এই প্রপার্টিটি পাওয়া যায়নি।</p>
+                        <a href="properties.html" class="btn-signup">সব প্রপার্টি দেখুন</a>
+                    </div>
+                `;
+                return;
+            }
+
+            try {
+                // First, try to fetch property from backend API
+                let property = null;
+                try {
+                    const res = await fetch(`/api/properties/${propertyId}`);
+                    if (res.ok) {
+                        property = await res.json();
+                    }
+                } catch (e) {
+                    console.warn('API fetch failed, will use demo data as fallback', e);
+                }
+
+                // Local demo fallback if API did not return a property
+                if (!property) {
+                    const demoProperties = {
+                    '1': {
+                        _id: '1',
+                        title: "লাক্সারি অ্যাপার্টমেন্ট, গুলশান",
+                        location: "রোড ১২৫, গুলশান",
+                        city: "ঢাকা",
+                        price: 45000,
+                        type: "apartment",
+                        bedrooms: 3,
+                        bathrooms: 2,
+                        size: 1500,
+                        description: "এটি একটি আধুনিক এবং লাক্সারি অ্যাপার্টমেন্ট গুলশানের প্রাইম লোকেশনে। সম্পূর্ণ ফার্নিশড, ২৪/৭ সিকিউরিটি, লিফট সুবিধা সহ। পার্কিং এবং জিম সুবিধা উপলব্ধ। নিকটবর্তী শপিং মল, রেস্টুরেন্ট এবং স্কুল। পারফেক্ট ফ্যামিলি লিভিং এর জন্য।",
+                        images: [
+                            "images/property1.jpg",
+                            "images/property2.png",
+                            "images/property3.png",
+                            "images/property4.png"
+                        ],
+                        owner: {
+                            name: "আরিফ আহমেদ",
+                            email: "arif@example.com",
+                            phone: "+880 1712-345678"
+                        },
+                        featured: true,
+                        available: true
+                    },
+                    '2': {
+                        _id: '2',
+                        title: "মডার্ন ফ্ল্যাট, বনানী",
+                        location: "রোড ১১, বনানী",
+                        city: "ঢাকা",
+                        price: 35000,
+                        type: "apartment",
+                        bedrooms: 2,
+                        bathrooms: 2,
+                        size: 1200,
+                        description: "বনানীর শান্ত পরিবেশে সুসজ্জিত ফ্ল্যাট। ২ বেডরুম, ২ বাথরুম সহ সম্পূর্ণ ফার্নিশড। নিকটবর্তী মার্কেট, স্কুল এবং হাসপাতাল। ২৪/৭ বিদ্যুৎ ও পানি সুবিধা। সিকিউরিটি সার্ভিস উপলব্ধ।",
+                        images: [
+                            "images/property5.jpg",
+                            "images/property6.jpg",
+                            "images/property7.jpg",
+                            "images/property8.jpg"
+                        ],
+                        owner: {
+                            name: "সুমাইয়া খান",
+                            email: "sumaiya@example.com",
+                            phone: "+880 1812-345678"
+                        },
+                        featured: true,
+                        available: true
+                    },
+                    '3': {
+                        _id: '3',
+                        title: "বাংলো, উত্তরা",
+                        location: "সেক্টর ৭, উত্তরা",
+                        city: "ঢাকা",
+                        price: 60000,
+                        type: "house",
+                        bedrooms: 4,
+                        bathrooms: 3,
+                        size: 2000,
+                        description: "উত্তরার প্রাইম লোকেশনে সুন্দর বাংলো। বড় গার্ডেন, ২ কার পার্কিং, এবং সকল আধুনিক সুবিধা সহ। পারিবারিক পরিবেশের জন্য উপযুক্ত। মেইন রোড থেকে খুব কাছাকাছি কিন্তু শান্ত পরিবেশ।",
+                        images: [
+                            "images/property9.jpg",
+                            "images/property10.jpg",
+                            "images/property11.jpg",
+                            "images/property12.jpg",
+                            "images/property13.jpg"
+                        ],
+                        owner: {
+                            name: "রফিকুল ইসলাম",
+                            email: "rafiq@example.com",
+                            phone: "+880 1912-345678"
+                        },
+                        featured: true,
+                        available: true
+                    },
+                    '4': {
+                        _id: '4',
+                        title: " মিরপুর, অ্যাপার্টমেন্ট",
+                        location: "সেক্টর ১০, মিরপুর",
+                        city: "ঢাকা",
+                        price: 40000,
+                        type: "ফ্ল্যাট",
+                        bedrooms: 3,
+                        bathrooms: 2,
+                        size: 1800,
+                        description: "মিরপুরে সুন্দর অ্যাপার্টমেন্ট, ফ্যামিলি-ফ্রেন্ডলি লোকেশন। ভালো ভেনটিলেশন, পার্কিং সুবিধা, এবং শপিং-স্কুলের কাছে।",
+                        images: [
+                            "images/property14.jpg",
+                            "images/property15.jpg",
+                            "images/property16.jpg",
+                            "images/property17.jpg",
+                            "images/property18.jpg",
+                            "images/property19.jpg",
+                            "images/property20.jpg"
+                        ],
+                        owner: {
+                            name: "মো: হাসান",
+                            email: "hasan@example.com",
+                            phone: "+880 1719-888777"
+                        },
+                        featured: true,
+                        available: true
+                    }
+                };
+
+                    property = demoProperties[propertyId];
+
+                    if (!property) {
+                        throw new Error('Property not found');
+                    }
+                }
+
+                document.title = `${property.title} - বাংলা হোমস`;
+
+                document.getElementById('propertyTitle').textContent = property.title;
+                document.getElementById('propertyPrice').textContent = `৳ ${property.price.toLocaleString()}/মাস`;
+                document.getElementById('propertyLocation').innerHTML = `<span>📍 ${property.location}, ${property.city}</span>`;
+                document.getElementById('propertyBedrooms').textContent = `${property.bedrooms} বেডরুম`;
+                document.getElementById('propertyBathrooms').textContent = `${property.bathrooms} বাথরুম`;
+                document.getElementById('propertySize').textContent = `${property.size} sqft`;
+                document.getElementById('propertyType').textContent = property.type === 'apartment' ? 'অ্যাপার্টমেন্ট' : 
+                                                                      property.type === 'house' ? 'বাড়ি' : 
+                                                                      property.type === 'duplex' ? 'ডুপ্লেক্স' : 'ভিলা';
+                document.getElementById('propertyDescription').textContent = property.description;
+
+                document.getElementById('ownerName').textContent = property.owner.name;
+                document.getElementById('ownerEmail').textContent = `ইমেইল: ${property.owner.email}`;
+                document.getElementById('ownerPhone').textContent = `ফোন: ${property.owner.phone}`;
+
+                const mainImage = document.getElementById('mainPropertyImage');
+                const thumbnailsContainer = document.getElementById('imageThumbnails');
+
+                if (property.images && property.images.length > 0) {
+                    mainImage.src = property.images[0];
+                    mainImage.alt = property.title;
+
+                    thumbnailsContainer.innerHTML = property.images.map((img, index) => `
+                        <img src="${img}" alt="${property.title} - Image ${index + 1}" 
+                             onclick="changeMainImage('${img}', this)" 
+                             class="thumbnail ${index === 0 ? 'active' : ''}">
+                    `).join('');
+                }
+
+                loadSimilarProperties(property);
+
+            } catch (error) {
+                console.error('Error loading property details:', error);
+                document.querySelector('.property-details-content').innerHTML = `
+                    <div class="error-message">
+                        <h2>প্রপার্টি লোড করতে সমস্যা</h2>
+                        <p>দুঃখিত, প্রপার্টি ডিটেইলস লোড করতে সমস্যা হচ্ছে।</p>
+                        <a href="properties.html" class="btn-signup">সব প্রপার্টি দেখুন</a>
+                    </div>
+                `;
+            }
+        }
+
+        function changeMainImage(imageSrc, el) {
+            document.getElementById('mainPropertyImage').src = imageSrc;
+            
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            if (el && el.classList) el.classList.add('active');
+        }
+
+        function loadSimilarProperties(currentProperty) {
+            const similarProperties = [
+                {
+                    _id: '2',
+                    title: "মডার্ন ফ্ল্যাট, বনানী",
+                    location: "বনানী, ঢাকা",
+                    price: 35000,
+                    type: "apartment",
+                    bedrooms: 2,
+                    bathrooms: 2,
+                    size: 1200,
+                    image: "images/property2.png",
+                    available: true
+                },
+                {
+                    _id: '3',
+                    title: "বাংলো, উত্তরা",
+                    location: "উত্তরা, ঢাকা",
+                    price: 60000,
+                    type: "house",
+                    bedrooms: 4,
+                    bathrooms: 3,
+                    size: 2000,
+                    image: "images/property9.jpg",
+                    available: true
+                },
+                {
+                    _id: '4',
+                    title: "ডুপ্লেক্স, মিরপুর",
+                    location: "মিরপুর, ঢাকা",
+                    price: 40000,
+                    type: "duplex",
+                    bedrooms: 3,
+                    bathrooms: 2,
+                    size: 1800,
+                    image: "images/property4.png",
+                    available: true
+                }
+            ].filter(prop => prop._id !== currentProperty._id);
+
+            const container = document.getElementById('similarProperties');
+            container.innerHTML = similarProperties.map(property => `
+                <div class="property-card">
+                    <img src="${property.image}" alt="${property.title}" class="property-image">
+                    <div class="property-info">
+                        <div class="property-price">৳ ${property.price.toLocaleString()}/মাস</div>
+                        <h3 class="property-title">${property.title}</h3>
+                        <div class="property-location">📍 ${property.location}</div>
+                        <div class="property-features">
+                            <span>🛏️ ${property.bedrooms} বেড</span>
+                            <span>🚿 ${property.bathrooms} বাথ</span>
+                            <span>📐 ${property.size} sqft</span>
+                        </div>
+                        <a href="property-details.html?id=${property._id}" class="btn-details">বিস্তারিত দেখুন</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function contactOwner(action) {
+            const ownerPhone = document.getElementById('ownerPhone').textContent.replace('ফোন: ', '');
+            
+            if (action === 'call') {
+                window.location.href = `tel:${ownerPhone}`;
+            } else if (action === 'message') {
+                window.location.href = `sms:${ownerPhone}`;
+            }
+        }
+
+        document.getElementById('propertyContactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            
+            alert(`ধন্যবাদ ${name}! আপনার মেসেজ সফলভাবে পাঠানো হয়েছে। মালিক শীঘ্রই আপনার সাথে যোগাযোগ করবেন।`);
+            this.reset();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPropertyDetails();
+        });
+    </script>
+
+    <style>
+        .property-details {
+            padding: 100px 0 50px;
+            background: var(--bg-light);
+        }
+
+        .property-details-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .property-gallery {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius);
+        }
+
+        .image-thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            overflow-x: auto;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbnail.active,
+        .thumbnail:hover {
+            border-color: var(--primary);
+        }
+
+        .property-info-details {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .property-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .property-header h1 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .property-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .property-features-overview {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
+        }
+
+        .property-description {
+            margin: 25px 0;
+        }
+
+        .property-description h3 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .owner-contact {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin: 25px 0;
+        }
+
+        .owner-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-call, .btn-message {
+            padding: 10px 15px;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .btn-call {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-message {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .contact-form-section {
+            margin-top: 30px;
+        }
+
+        .similar-properties {
+            margin-top: 50px;
+        }
+
+        .similar-properties h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 60px 20px;
+            grid-column: 1 / -1;
+        }
+
+        .error-message h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .property-details-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .property-features-overview {
+                grid-template-columns: 1fr;
+            }
+            
+            .owner-details {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .btn-call, .btn-message {
+                flex: 1;
+            }
+        }
+    </style>
+</body>
+</html>

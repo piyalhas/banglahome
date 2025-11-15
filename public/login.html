@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লগইন - বাংলা হোমস</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login">লগইন</a>
+                    <a href="signup.html" class="btn-signup">নিবন্ধন</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="form-container">
+        <div class="auth-card">
+            <h2>আপনার অ্যাকাউন্টে লগইন করুন</h2>
+            
+            <div id="loginMessage" class="form-message" style="display:none"></div>
+            
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">ইমেইল এড্রেস</label>
+                    <input type="email" id="loginEmail" name="email" required placeholder="your.email@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword">পাসওয়ার্ড</label>
+                    <input type="password" id="loginPassword" name="password" required placeholder="আপনার পাসওয়ার্ড লিখুন">
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe">
+                        <span>আমাকে মনে রাখুন</span>
+                    </label>
+                    <a href="#" class="forgot-password">পাসওয়ার্ড ভুলে গেছেন?</a>
+                </div>
+                
+                <button type="submit" class="btn-signup" style="width: 100%;">লগইন করুন</button>
+            </form>
+            
+            <div class="auth-switch">
+                <p>অ্যাকাউন্ট নেই? <a href="signup.html">এখানে নিবন্ধন করুন</a></p>
+            </div>
+
+            <div class="demo-accounts">
+                <h3>ডেমো অ্যাকাউন্টস</h3>
+                <div class="demo-grid">
+                    <div class="demo-account">
+                        <h4>ভাড়াটে অ্যাকাউন্ট</h4>
+                        <p><strong>ইমেইল:</strong> tenant@demo.com</p>
+                        <p><strong>পাসওয়ার্ড:</strong> demo123</p>
+                    </div>
+                    <div class="demo-account">
+                        <h4>মালিক অ্যাকাউন্ট</h4>
+                        <p><strong>ইমেইল:</strong> owner@demo.com</p>
+                        <p><strong>পাসওয়ার্ড:</strong> demo123</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <style>
+        .auth-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .auth-card h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+            font-size: 1.8rem;
+        }
+
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .auth-switch {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+        }
+
+        .auth-switch a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .auth-switch a:hover {
+            text-decoration: underline;
+        }
+
+        .demo-accounts {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+        }
+
+        .demo-accounts h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .demo-account {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .demo-account h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .demo-account p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .form-message {
+            padding: 12px 15px;
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-options {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            
+            .auth-card {
+                padding: 25px;
+                margin: 20px;
+            }
+        }
+    </style>
+</body>
+</html>

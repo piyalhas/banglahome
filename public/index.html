@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা হোমস - আপনার Dream Home খুঁজুন</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt=" ">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html" class="active">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons" id="authSection">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>আপনার Dream Home খুঁজে নিন</h1>
+                <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                
+                <div class="search-box">
+                    <div class="search-tabs">
+                        <button class="tab-active" data-tab="rent">বাড়ি ভাড়া</button>
+                        <button data-tab="flat">ফ্ল্যাট ভাড়া</button>
+                        <button data-tab="commercial">কমার্শিয়াল</button>
+                    </div>
+                    <div class="search-form">
+                        <div class="form-group">
+                            <select id="location">
+                                <option value="">লোকেশন নির্বাচন করুন</option>
+                                <option value="dhaka">ঢাকা</option>
+                                <option value="chittagong">চট্টগ্রাম</option>
+                                <option value="sylhet">সিলেট</option>
+                                <option value="khulna">খুলনা</option>
+                                <option value="rajshahi">রাজশাহী</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="property-type">
+                                <option value="">প্রপার্টি টাইপ</option>
+                                <option value="apartment">অ্যাপার্টমেন্ট</option>
+                                <option value="house">বাড়ি</option>
+                                <option value="duplex">ডুপ্লেক্স</option>
+                                <option value="villa">ভিলা</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="price-range">
+                                <option value="">প্রাইস রেঞ্জ</option>
+                                <option value="0-10000">৫,০০০ - ১০,০০০ টাকা</option>
+                                <option value="10000-20000">১০,০০০ - ২০,০০০ টাকা</option>
+                                <option value="20000-50000">২০,০০০ - ৫০,০০০ টাকা</option>
+                                <option value="50000+">৫০,০০০+ টাকা</option>
+                            </select>
+                        </div>
+                        <button class="btn-search" onclick="searchProperties()">
+                            <span>খুঁজুন</span>
+                            <i class="search-icon">🔍</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-properties">
+        <div class="container">
+            <div class="section-header">
+                <h2>ফিচার্ড প্রপার্টিজ</h2>
+                <p>সেরা এবং ভেরিফাইড প্রপার্টিজ</p>
+            </div>
+            <div class="properties-grid" id="featuredProperties">
+            </div>
+            <div class="view-all">
+                <a href="properties.html" class="btn-view-all">সব প্রপার্টি দেখুন</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>কিভাবে কাজ করে</h2>
+                <p>সহজ ৩টি ধাপে আপনার Dream Home খুঁজে নিন</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">1</div>
+                    <h3>খুঁজুন</h3>
+                    <p>আপনার পছন্দের লোকেশন এবং বাজেট অনুযায়ী প্রপার্টি খুঁজুন</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">2</div>
+                    <h3>যোগাযোগ করুন</h3>
+                    <p>সরাসরি প্রপার্টি মালিকের সাথে যোগাযোগ করুন</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">3</div>
+                    <h3>বুক করুন</h3>
+                    <p>বাড়ি ভিজিট করুন এবং ডিল ফাইনাল করুন</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-locations">
+        <div class="container">
+            <div class="section-header">
+                <h2>জনপ্রিয় লোকেশন</h2>
+                <p>বাংলাদেশের সবচেয়ে জনপ্রিয় লোকেশনগুলো</p>
+            </div>
+            <div class="locations-grid">
+                <div class="location-card" onclick="filterByLocation('dhaka')">
+                    <img src="images/dhakacity.jpg" alt="ঢাকা">
+                    <div class="location-info">
+                        <h3>ঢাকা</h3>
+                        <p>৫০০+ প্রপার্টি</p>
+                    </div>
+                </div>
+                <div class="location-card" onclick="filterByLocation('chittagong')">
+                    <img src="images/chittagongcity.jpg" alt="চট্টগ্রাম">
+                    <div class="location-info">
+                        <h3>চট্টগ্রাম</h3>
+                        <p>২০০+ প্রপার্টি</p>
+                    </div>
+                </div>
+                <div class="location-card" onclick="filterByLocation('sylhet')">
+                    <img src="images/Sylhetcity.jpg" alt="সিলেট">
+                    <div class="location-info">
+                        <h3>সিলেট</h3>
+                        <p>১৫০+ প্রপার্টি</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

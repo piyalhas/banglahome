@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লাইভ চ্যাট - বাংলা হোমস</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat-payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons" id="authSection">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="chat-section" style="padding: 100px 0 50px; background: var(--bg-light); min-height: 100vh;">
+        <div class="container">
+            <h1 style="text-align: center; margin-bottom: 30px; color: var(--text-dark);">মালিকের সাথে লাইভ চ্যাট করুন</h1>
+            
+            <div class="chat-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="chat-header" style="background: var(--primary); color: white; padding: 20px; border-radius: 8px 8px 0 0; display: flex; justify-content: space-between; align-items: center;">
+                    <h2 id="chatTitle" style="margin: 0; font-size: 1.2rem;">প্রপার্টি চ্যাট</h2>
+                    <span id="connectionStatus" style="font-size: 12px; background: rgba(255,255,255,0.3); padding: 5px 10px; border-radius: 20px;">সংযুক্ত হচ্ছে...</span>
+                </div>
+
+                <div id="chatMessages" class="chat-messages" style="background: white; height: 400px; overflow-y: auto; padding: 20px; border-left: 1px solid var(--border); border-right: 1px solid var(--border);">
+                    <div style="text-align: center; color: var(--text-light); margin-top: 150px;">
+                        <p>চ্যাট মেসেজ লোড হচ্ছে...</p>
+                    </div>
+                </div>
+
+                <form id="chatForm" class="chat-form" style="background: white; padding: 15px; border-radius: 0 0 8px 8px; border-left: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; gap: 10px;">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="আপনার মেসেজ লিখুন..." 
+                        style="flex: 1; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; font-size: 14px;"
+                        required
+                    >
+                    <button 
+                        type="submit" 
+                        style="padding: 12px 30px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; font-family: inherit;"
+                    >
+                        পাঠান
+                    </button>
+                </form>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--text-light);">প্রতিটি মেসেজ স্বয়ংক্রিয়ভাবে সংরক্ষিত হয়। আপনি যেকোনো সময় এই চ্যাটে ফিরে আসতে পারেন।</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="chat.js"></script>
+
+    <style>
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .message.own {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px;
+            border-radius: 8px;
+            word-wrap: break-word;
+        }
+
+        .message.own .message-content {
+            background: var(--primary);
+            color: white;
+            border-radius: 8px 0 8px 8px;
+        }
+
+        .message.other .message-content {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            border-radius: 0 8px 8px 8px;
+        }
+
+        .message-sender {
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 5px;
+            opacity: 0.8;
+        }
+
+        .message-content p {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .message-content small {
+            font-size: 11px;
+            opacity: 0.7;
+            margin-top: 5px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .chat-container {
+                margin: 0;
+            }
+
+            .chat-messages {
+                height: 300px !important;
+            }
+
+            .message-content {
+                max-width: 90% !important;
+            }
+        }
+    </style>
+</body>
+</html>

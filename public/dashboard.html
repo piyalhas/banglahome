@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ড্যাশবোর্ড - বাংলা হোমস</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons" id="authSection">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>আপনার ড্যাশবোর্ড</h1>
+                <p>আপনার প্রপার্টি এবং অ্যাকাউন্ট ম্যানেজ করুন</p>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalProperties">0</span>
+                    <span>মোট প্রপার্টি</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="availableProperties">0</span>
+                    <span>এভেইলেবল প্রপার্টি</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="totalViews">1,254</span>
+                    <span>মোট ভিউ</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="messages">3</span>
+                    <span>নতুন মেসেজ</span>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <a href="list-property.html" class="btn-signup">➕ নতুন প্রপার্টি যোগ করুন</a>
+                <a href="profile.html" class="btn-login">👤 প্রোফাইল এডিট করুন</a>
+                <a href="properties.html" class="btn-login">🔍 প্রপার্টি ব্রাউজ করুন</a>
+            </div>
+
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>আপনার প্রপার্টিস</h2>
+                    <p>আপনার সকল লিস্টেড প্রপার্টি</p>
+                </div>
+                <div class="properties-grid" id="userProperties">
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <div class="section-header">
+                    <h2>সাম্প্রতিক কার্যক্রম</h2>
+                    <p>আপনার একাউন্টের সাম্প্রতিক কার্যক্রম</p>
+                </div>
+                <div class="activity-list" id="recentActivity">
+                    <div class="activity-item">
+                        <div class="activity-icon">👁️</div>
+                        <div class="activity-content">
+                            <p><strong>আপনার প্রপার্টি ভিজিট করা হয়েছে</strong></p>
+                            <small>লাক্সারি অ্যাপার্টমেন্ট, গুলশান - ২ ঘন্টা আগে</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">💬</div>
+                        <div class="activity-content">
+                            <p><strong>নতুন মেসেজ পেয়েছেন</strong></p>
+                            <small>রফিকুল ইসলাম - ৫ ঘন্টা আগে</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">⭐</div>
+                        <div class="activity-content">
+                            <p><strong>প্রপার্টি সেভ করা হয়েছে</strong></p>
+                            <small>মডার্ন ফ্ল্যাট, বনানী - ১ দিন আগে</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <style>
+        .dashboard {
+            padding: 100px 0 50px;
+            min-height: 100vh;
+            background: var(--bg-light);
+        }
+
+        .dashboard-header {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .dashboard-header h1 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .dashboard-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .dashboard-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .dashboard-section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 1.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .activity-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .activity-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .activity-content p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .activity-content small {
+            color: var(--text-light);
+        }
+
+        .property-status {
+            margin: 10px 0;
+        }
+
+        .status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status.available {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status.rented {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-actions {
+                flex-direction: column;
+            }
+            
+            .dashboard-actions a {
+                text-align: center;
+            }
+            
+            .activity-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .dashboard-header {
+                padding: 20px;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রোফাইল - বাংলা হোমস</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                    <span>বাংলা হোমস</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">হোম</a>
+                    <a href="properties.html">বাড়ি খুঁজুন</a>
+                    <a href="list-property.html">বাড়ি দিন</a>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </nav>
+                <div class="auth-buttons" id="authSection">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-header">
+                <h1>আপনার প্রোফাইল</h1>
+                <p>আপনার তথ্য আপডেট এবং ম্যানেজ করুন</p>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <div class="avatar-placeholder" id="userAvatar">👤</div>
+                        <h3 id="userName">ইউজার নাম</h3>
+                        <p id="userRole">টেনান্ট</p>
+                        <p id="memberSince">সদস্য since: ২০২৫</p>
+                    </div>
+                    
+                    <nav class="profile-nav">
+                        <a href="#personal-info" class="nav-active">ব্যক্তিগত তথ্য</a>
+                        <a href="#security">সিকিউরিটি</a>
+                        <a href="#preferences">পছন্দসমূহ</a>
+                        <a href="#notifications">বিজ্ঞপ্তি</a>
+                    </nav>
+                </div>
+
+                <div class="profile-main">
+                    <div id="personal-info" class="profile-tab active">
+                        <h2>ব্যক্তিগত তথ্য</h2>
+                        <form id="profileForm" class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">পুরো নাম *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">ইমেইল *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">ফোন নম্বর</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">অ্যাকাউন্ট টাইপ</label>
+                                    <select id="role" name="role" disabled>
+                                        <option value="tenant">ভাড়াটে</option>
+                                        <option value="owner">প্রপার্টি মালিক</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">ঠিকানা</label>
+                                <textarea id="address" name="address" rows="3" placeholder="আপনার বর্তমান ঠিকানা"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bio">বায়ো</label>
+                                <textarea id="bio" name="bio" rows="4" placeholder="আপনার সম্পর্কে সংক্ষিপ্ত বর্ণনা..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-signup">প্রোফাইল আপডেট করুন</button>
+                        </form>
+                    </div>
+
+                    <div id="security" class="profile-tab">
+                        <h2>পাসওয়ার্ড পরিবর্তন</h2>
+                        <form id="passwordForm" class="profile-form">
+                            <div class="form-group">
+                                <label for="currentPassword">বর্তমান পাসওয়ার্ড *</label>
+                                <input type="password" id="currentPassword" name="currentPassword" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="newPassword">নতুন পাসওয়ার্ড *</label>
+                                <input type="password" id="newPassword" name="newPassword" required>
+                                <small style="color: var(--text-light);">পাসওয়ার্ড নূন্যতম ৬ ক্যারেক্টার দীর্ঘ হতে হবে</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">পাসওয়ার্ড নিশ্চিত করুন *</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            </div>
+
+                            <div class="security-tips">
+                                <h4>পাসওয়ার্ড নিরাপত্তা টিপস:</h4>
+                                <ul>
+                                    <li>নূন্যতম ৮ ক্যারেক্টার ব্যবহার করুন</li>
+                                    <li>বড় হাতের এবং ছোট হাতের অক্ষর মিশ্রিত করুন</li>
+                                    <li>সংখ্যা এবং বিশেষ ক্যারেক্টার যোগ করুন</li>
+                                    <li>ব্যক্তিগত তথ্য ব্যবহার করবেন না</li>
+                                </ul>
+                            </div>
+
+                            <button type="submit" class="btn-signup">পাসওয়ার্ড পরিবর্তন করুন</button>
+                        </form>
+                    </div>
+
+                    <div id="preferences" class="profile-tab">
+                        <h2>পছন্দসমূহ</h2>
+                        <form id="preferencesForm" class="profile-form">
+                            <div class="form-group">
+                                <label for="language">পছন্দের ভাষা</label>
+                                <select id="language" name="language">
+                                    <option value="bn">বাংলা</option>
+                                    <option value="en">English</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="currency">কারেন্সি</label>
+                                <select id="currency" name="currency">
+                                    <option value="BDT">বাংলাদেশী টাকা (BDT)</option>
+                                    <option value="USD">US Dollar (USD)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="timezone">টাইমজোন</label>
+                                <select id="timezone" name="timezone">
+                                    <option value="Asia/Dhaka">Asia/Dhaka (বাংলাদেশ সময়)</option>
+                                    <option value="UTC">UTC</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="theme">থিম</label>
+                                <select id="theme" name="theme">
+                                    <option value="light">লাইট</option>
+                                    <option value="dark">ডার্ক</option>
+                                    <option value="auto">অটো</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-signup">পছন্দসমূহ সেভ করুন</button>
+                        </form>
+                    </div>
+
+                    <div id="notifications" class="profile-tab">
+                        <h2>বিজ্ঞপ্তি সেটিংস</h2>
+                        <form id="notificationsForm" class="profile-form">
+                            <div class="form-group">
+                                <label>ইমেইল বিজ্ঞপ্তি</label>
+                                <div class="checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="emailNotifications" checked>
+                                        সাধারণ বিজ্ঞপ্তি
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="propertyAlerts" checked>
+                                        নতুন প্রপার্টি অ্যালার্ট
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="messageNotifications" checked>
+                                        নতুন মেসেজ
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="promotionalEmails">
+                                        প্রচারমূলক ইমেইল
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>পুশ বিজ্ঞপ্তি</label>
+                                <div class="checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="pushNotifications" checked>
+                                        ব্রাউজার বিজ্ঞপ্তি
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="importantAlerts" checked>
+                                        গুরুত্বপূর্ণ অ্যালার্ট
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>এসএমএস বিজ্ঞপ্তি</label>
+                                <div class="checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="smsNotifications">
+                                        এসএমএস বিজ্ঞপ্তি
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="securityAlerts" checked>
+                                        সিকিউরিটি অ্যালার্ট
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-signup">বিজ্ঞপ্তি সেটিংস সেভ করুন</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="বাংলা হোমস লোগো">
+                        <span>বাংলা হোমস</span>
+                    </div>
+                    <p>বাংলাদেশের সবচেয়ে বিশ্বস্ত প্রপার্টি রেন্টাল প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংকস</h4>
+                    <ul>
+                        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                        <li><a href="contact.html">যোগাযোগ</a></li>
+                        <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="terms.html">টার্মস অ্যান্ড কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ক্যাটেগরিস</h4>
+                    <ul>
+                        <li><a href="properties.html?type=apartment">অ্যাপার্টমেন্ট</a></li>
+                        <li><a href="properties.html?type=house">বাড়ি</a></li>
+                        <li><a href="properties.html?type=commercial">কমার্শিয়াল</a></li>
+                        <li><a href="properties.html?type=duplex">ডুপ্লেক্স</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>যোগাযোগ</h4>
+                    <p>ইমেইল: info@banglahomes.com</p>
+                    <p>ফোন: +৮৮০ ১৬XX-XXXXXX</p>
+                    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৫ বাংলা হোমস. সকল অধিকার সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.querySelectorAll('.profile-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelectorAll('.profile-nav a').forEach(a => {
+                    a.classList.remove('nav-active');
+                });
+                document.querySelectorAll('.profile-tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                
+                this.classList.add('nav-active');
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+            const currentYear = new Date().getFullYear();
+            
+            if (user) {
+                document.getElementById('userName').textContent = user.name || 'ইউজার নাম';
+                document.getElementById('userRole').textContent = user.role === 'owner' ? 'প্রপার্টি মালিক' : 'ভাড়াটে';
+                document.getElementById('memberSince').textContent = `সদস্য since: ${currentYear}`;
+                document.getElementById('name').value = user.name || '';
+                document.getElementById('email').value = user.email || '';
+                document.getElementById('phone').value = user.phone || '';
+                document.getElementById('role').value = user.role || 'tenant';
+                
+                const avatar = document.getElementById('userAvatar');
+                avatar.textContent = user.name ? user.name.charAt(0).toUpperCase() : '👤';
+            }
+        });
+
+        document.getElementById('profileForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('প্রোফাইল সফলভাবে আপডেট করা হয়েছে!');
+        });
+
+        document.getElementById('passwordForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (newPassword !== confirmPassword) {
+                alert('পাসওয়ার্ড মিলেনি!');
+                return;
+            }
+            
+            if (newPassword.length < 6) {
+                alert('পাসওয়ার্ড নূন্যতম ৬ ক্যারেক্টার দীর্ঘ হতে হবে!');
+                return;
+            }
+            
+            alert('পাসওয়ার্ড সফলভাবে পরিবর্তন করা হয়েছে!');
+            this.reset();
+        });
+
+        document.getElementById('preferencesForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('পছন্দসমূহ সফলভাবে সেভ করা হয়েছে!');
+        });
+
+        document.getElementById('notificationsForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('বিজ্ঞপ্তি সেটিংস সফলভাবে সেভ করা হয়েছে!');
+        });
+    </script>
+    <style>
+        .profile-section {
+            padding: 100px 0 50px;
+            background: var(--bg-light);
+            min-height: 100vh;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-header h1 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        .profile-sidebar {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .profile-avatar {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+
+        .avatar-placeholder {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 15px;
+            color: var(--white);
+        }
+
+        .profile-avatar h3 {
+            margin: 0 0 5px 0;
+            color: var(--text-dark);
+        }
+
+        .profile-avatar p {
+            margin: 2px 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .profile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .profile-nav a {
+            padding: 12px 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .profile-nav a:hover,
+        .profile-nav a.nav-active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .profile-main {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-tab {
+            display: none;
+        }
+
+        .profile-tab.active {
+            display: block;
+        }
+
+        .profile-form {
+            max-width: 600px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 8px 0;
+        }
+
+        .security-tips {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin: 20px 0;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .security-tips h4 {
+            margin: 0 0 10px 0;
+            color: var(--text-dark);
+        }
+
+        .security-tips ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--text-light);
+        }
+
+        .security-tips li {
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</body>
+</html>
